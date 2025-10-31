@@ -1,3 +1,6 @@
+/* 💡 IMPORTAÇÃO DA FONTE ORBITRON */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
 /* Cores e Fontes */
 :root {
     --primary-color: #00bcd4; /* Azul Ciano - Destaque Principal */
@@ -9,6 +12,8 @@
 body {
     font-family: 'Orbitron', sans-serif; /* Fonte de alta tecnologia/caixa alta */
     background-color: var(--background-dark);
+    /* Adicione uma altura mínima para permitir a rolagem e ver o efeito Parallax */
+    min-height: 200vh; 
 }
 
 /* Estilos de Destaque em Caixa Alta */
@@ -36,7 +41,7 @@ body {
     background-position: bottom;
     background-repeat: no-repeat;
     position: relative;
-    overflow: hidden; /* Importante para o efeito Parallax */
+    overflow: hidden; 
 }
 
 /* Overlay Escuro para melhorar a leitura do texto */
@@ -58,27 +63,30 @@ body {
     border-radius: 10px;
 }
 
-/* Parallax do Astronauta */
+/* Parallax do Astronauta - CORRIGIDO */
 .parallax-astronauta {
     position: absolute;
     bottom: 5%; /* Posição inicial no canto inferior */
     right: 5%;
     width: 250px; /* Tamanho da imagem do astronauta */
-    z-index: 3; /* Fica acima de tudo, exceto o texto do modal */
+    height: 300px; /* **ESSENCIAL: Adicionada altura para o background ser visível** */
+    z-index: 3; 
     
-    /* Efeito Parallax: Usa 'fixed' para o efeito. Ajuste o bottom/right para posicionar. */
-    background-attachment: fixed; /* O elemento de fundo se move mais devagar */
-    background-position: center;
+    /* Aplica a imagem como fundo e a fixa para o Parallax */
+    background-image: url('../img/astronauta.png'); /* **Defina o caminho correto da imagem do astronauta** */
+    background-size: contain; /* Garante que o astronauta caiba */
+    background-position: bottom right; 
     background-repeat: no-repeat;
-    transition: transform 0.1s ease-out; /* Adiciona uma transição suave para o scroll (opcional) */
-}
-
-.parallax-astronauta img {
-    width: 100%;
-    height: auto;
+    background-attachment: fixed; /* 🚀 EFEITO PARALLAX APLICADO AQUI */
+    
+    transition: transform 0.1s ease-out; 
+    
     /* Efeito de flutuação leve (opcional) */
     animation: float 6s ease-in-out infinite;
 }
+
+/* A regra para '.parallax-astronauta img' foi removida, 
+   pois a imagem agora é o background da div. */
 
 @keyframes float {
     0% { transform: translatey(0px); }
