@@ -31,7 +31,7 @@ body {
 /* HERO SECTION - Fundo Imagem e Parallax */
 .hero-section {
     height: 100vh; /* Altura total da viewport */
-    background-image: url('espaco-fundo.jpg'); /* **IMAGEM DO ESPAÇO** */
+    background-image: url('/img/bg.jpg'); /* **IMAGEM DO ESPAÇO** */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
