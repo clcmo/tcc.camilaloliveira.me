@@ -1,0 +1,127 @@
+/* Cores e Fontes */
+:root {
+    --primary-color: #00bcd4; /* Azul Ciano - Destaque Principal */
+    --secondary-color: #ff9800; /* Laranja - Destaque Secundário */
+    --background-dark: #0a111a; /* Fundo muito escuro */
+    --text-light: #e0f7fa; /* Texto claro */
+}
+
+body {
+    font-family: 'Orbitron', sans-serif; /* Fonte de alta tecnologia/caixa alta */
+    background-color: var(--background-dark);
+}
+
+/* Estilos de Destaque em Caixa Alta */
+.highlight-text {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    text-shadow: 0 0 15px rgba(0, 188, 212, 0.9); /* Efeito neon */
+    letter-spacing: 3px;
+}
+
+.highlight-text-secondary {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(255, 152, 0, 0.7);
+    letter-spacing: 2px;
+}
+
+/* HERO SECTION - Fundo Imagem e Parallax */
+.hero-section {
+    height: 100vh; /* Altura total da viewport */
+    background-image: url('espaco-fundo.jpg'); /* **IMAGEM DO ESPAÇO** */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden; /* Importante para o efeito Parallax */
+}
+
+/* Overlay Escuro para melhorar a leitura do texto */
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Sombra escura */
+    z-index: 1;
+}
+
+.hero-content {
+    z-index: 2; /* Garante que o texto fique acima do overlay e do astronauta */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+/* Parallax do Astronauta */
+.parallax-astronauta {
+    position: absolute;
+    bottom: 5%; /* Posição inicial no canto inferior */
+    right: 5%;
+    width: 250px; /* Tamanho da imagem do astronauta */
+    z-index: 3; /* Fica acima de tudo, exceto o texto do modal */
+    
+    /* Efeito Parallax: Usa 'fixed' para o efeito. Ajuste o bottom/right para posicionar. */
+    background-attachment: fixed; /* O elemento de fundo se move mais devagar */
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.1s ease-out; /* Adiciona uma transição suave para o scroll (opcional) */
+}
+
+.parallax-astronauta img {
+    width: 100%;
+    height: auto;
+    /* Efeito de flutuação leve (opcional) */
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translatey(0px); }
+    50% { transform: translatey(-20px); }
+    100% { transform: translatey(0px); }
+}
+
+/* Botão CTA */
+.cta-button {
+    background-color: var(--primary-color);
+    color: var(--background-dark);
+    border: none;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+.cta-button:hover {
+    background-color: #4dd0e1; 
+    transform: scale(1.02);
+    box-shadow: 0 0 20px var(--primary-color);
+}
+
+/* Estilo do Mapa */
+.map-container {
+    overflow: hidden;
+}
+
+/* Estilo do Modal (opcional, apenas para cores) */
+#linksModal .modal-content {
+    background-color: var(--background-dark);
+    color: var(--text-light);
+}
+
+.list-group-item:hover {
+    background-color: var(--primary-color) !important;
+    color: var(--background-dark) !important;
+    border-color: var(--primary-color) !important;
+}
+
+/* Responsividade do Astronauta */
+@media (max-width: 992px) {
+    /* Esconde o astronauta em telas menores para não atrapalhar o layout */
+    .parallax-astronauta {
+        display: none !important; 
+    }
+}
