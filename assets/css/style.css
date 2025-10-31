@@ -73,7 +73,7 @@ body {
     z-index: 3; 
     
     /* Aplica a imagem como fundo e a fixa para o Parallax */
-    background-image: url('../img/astronauta.png'); /* **Defina o caminho correto da imagem do astronauta** */
+    background-image: url('../img/astronaut.png'); /* **Defina o caminho correto da imagem do astronauta** */
     background-size: contain; /* Garante que o astronauta caiba */
     background-position: bottom right; 
     background-repeat: no-repeat;
