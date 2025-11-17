@@ -1,0 +1,13 @@
+:root {
+    --primary-color: #00d4ff;
+    --secondary-color: #7b2cbf;
+    --accent-color: #ff006e;
+    --dark-bg: #0a0e27;
+}
+
+[data-theme="ocean"] {
+    --primary-color: #00bcd4;
+    --secondary-color: #ff9800;
+    --accent-color: #ff9800;
+    --dark-bg: #0a111a;
+}

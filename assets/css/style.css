@@ -1,135 +1,293 @@
-/* 💡 IMPORTAÇÃO DA FONTE ORBITRON */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
-
-/* Cores e Fontes */
-:root {
-    --primary-color: #00bcd4; /* Azul Ciano - Destaque Principal */
-    --secondary-color: #ff9800; /* Laranja - Destaque Secundário */
-    --background-dark: #0a111a; /* Fundo muito escuro */
-    --text-light: #e0f7fa; /* Texto claro */
-}
+@import 'themes.css';
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Lexend:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
 body {
-    font-family: 'Orbitron', sans-serif; /* Fonte de alta tecnologia/caixa alta */
-    background-color: var(--background-dark);
-    /* Adicione uma altura mínima para permitir a rolagem e ver o efeito Parallax */
-    min-height: 200vh; 
+    background: linear-gradient(135deg, #0a0e27 0%, #1a1a2e 50%, #16213e 100%);
+    font-family: 'Lexend', sans-serif;
 }
 
-/* Estilos de Destaque em Caixa Alta */
-.highlight-text {
+h1,
+h2,
+.game-title,
+.cta-button,
+.social-btn,
+.tag,
+.coming-soon {
     font-family: 'Orbitron', sans-serif;
-    color: var(--primary-color);
-    text-transform: uppercase;
-    text-shadow: 0 0 15px rgba(0, 188, 212, 0.9); /* Efeito neon */
-    letter-spacing: 3px;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+    vertical-align: middle;
+    font-size: 1.2em;
+}
+
+.hero-section {
+    min-height: 100vh;
+    background: linear-gradient(135deg, rgba(10, 14, 39, 0.95) 0%, rgba(26, 26, 46, 0.95) 100%);
+    background-image: url('../img/bg.jpg');
+    position: relative;
+    overflow: hidden;
+}
+
+.parallax-astronauta {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/astronaut.png');
+    background-size: 300px;
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
+    opacity: 0.15;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+.hero-content {
+    z-index: 10;
+}
+
+.highlight-text {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.5));
+    }
+
+    to {
+        filter: drop-shadow(0 0 40px rgba(255, 0, 110, 0.8));
+    }
 }
 
 .highlight-text-secondary {
-    font-family: 'Orbitron', sans-serif;
-    color: var(--secondary-color);
+    color: #b8b8d1;
+}
+
+.cta-button {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: 900;
     text-transform: uppercase;
-    text-shadow: 0 0 10px rgba(255, 152, 0, 0.7);
     letter-spacing: 2px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(123, 44, 191, 0.4);
 }
 
-/* HERO SECTION - Fundo Imagem e Parallax */
-.hero-section {
-    height: 100vh; /* Altura total da viewport */
-    background-image: url('../img/bg.jpg'); /* **IMAGEM DO ESPAÇO** */
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
+.cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(255, 0, 110, 0.6);
+}
+
+.game-card {
+    background: linear-gradient(135deg, rgba(26, 26, 46, 0.9) 0%, rgba(22, 33, 62, 0.9) 100%);
+    border: 2px solid rgba(0, 212, 255, 0.3);
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+    transition: all 0.4s ease;
     position: relative;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
-/* Overlay Escuro para melhorar a leitura do texto */
-.hero-section::after {
+.game-card::before {
     content: '';
     position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(0, 212, 255, 0.8);
+    box-shadow: 0 20px 60px rgba(0, 212, 255, 0.4);
+}
+
+.game-title {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
+}
+
+.studio-name {
+    font-size: 1rem;
+    color: #b8b8d1;
+    margin-bottom: 20px;
+    font-weight: 400;
+    position: relative;
+    z-index: 1;
+}
+
+.card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.tag {
+    background: rgba(123, 44, 191, 0.3);
+    border: 1px solid var(--secondary-color);
+    color: #e0aaff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 1;
+}
+
+.social-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(255, 0, 110, 0.5);
+    color: white;
+}
+
+.coming-soon {
+    display: inline-block;
+    background: rgba(255, 193, 7, 0.2);
+    border: 1px solid #ffc107;
+    color: #ffc107;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+}
+
+.map-container {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.stars {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Sombra escura */
-    z-index: 1;
+    pointer-events: none;
+    z-index: 0;
 }
 
-.hero-content {
-    z-index: 2; /* Garante que o texto fique acima do overlay e do astronauta */
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-}
-
-/* Parallax do Astronauta - CORRIGIDO */
-.parallax-astronauta {
+.star {
     position: absolute;
-    bottom: 5%; /* Posição inicial no canto inferior */
-    right: 5%;
-    width: 250px; /* Tamanho da imagem do astronauta */
-    height: 300px; /* **ESSENCIAL: Adicionada altura para o background ser visível** */
-    z-index: 3; 
-    
-    /* Aplica a imagem como fundo e a fixa para o Parallax */
-    background-image: url('../img/astronaut.png'); /* **Defina o caminho correto da imagem do astronauta** */
-    background-size: contain; /* Garante que o astronauta caiba */
-    background-position: bottom right; 
-    background-repeat: no-repeat;
-    background-attachment: fixed; /* 🚀 EFEITO PARALLAX APLICADO AQUI */
-    
-    transition: transform 0.1s ease-out; 
-    
-    /* Efeito de flutuação leve (opcional) */
-    animation: float 6s ease-in-out infinite;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 3s infinite;
 }
 
-/* A regra para '.parallax-astronauta img' foi removida, 
-   pois a imagem agora é o background da div. */
+@keyframes twinkle {
 
-@keyframes float {
-    0% { transform: translatey(0px); }
-    50% { transform: translatey(-20px); }
-    100% { transform: translatey(0px); }
-}
-
-/* Botão CTA */
-.cta-button {
-    background-color: var(--primary-color);
-    color: var(--background-dark);
-    border: none;
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 0 10px var(--primary-color);
-}
-
-.cta-button:hover {
-    background-color: #4dd0e1; 
-    transform: scale(1.02);
-    box-shadow: 0 0 20px var(--primary-color);
-}
-
-/* Estilo do Mapa */
-.map-container {
-    overflow: hidden;
-}
-
-/* Estilo do Modal (opcional, apenas para cores) */
-#linksModal .modal-content {
-    background-color: var(--background-dark);
-    color: var(--text-light);
-}
-
-.list-group-item:hover {
-    background-color: var(--primary-color) !important;
-    color: var(--background-dark) !important;
-    border-color: var(--primary-color) !important;
-}
-
-/* Responsividade do Astronauta */
-@media (max-width: 992px) {
-    /* Esconde o astronauta em telas menores para não atrapalhar o layout */
-    .parallax-astronauta {
-        display: none !important; 
+    0%,
+    100% {
+        opacity: 0.3;
     }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--accent-color);
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+    border: 2px solid var(--primary-color);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 212, 255, 0.4);
+}
+
+.theme-toggle:hover {
+    transform: rotate(180deg) scale(1.1);
+    box-shadow: 0 8px 30px rgba(255, 0, 110, 0.6);
+}
+
+.theme-toggle:active {
+    transform: rotate(180deg) scale(0.95);
 }
