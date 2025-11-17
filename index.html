@@ -3,56 +3,211 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TCC 2025 - Missão ETEC Ermelinda</title>
+    <meta name="description" content="Apresentações do Trabalhos de Conclusão de Curso em Jogos Digitais (2023/2025)">
+    <meta name="keywords" content="tcc, unity, gamemaker, demonstrações, feira, banca, desenvolvimento">
+    <meta name="author" content="ETEC Ermelinda">
+
+    <meta property="og:title" content="TCC 2025 - Missão ETEC Ermelinda">
+    <meta property="og:description"
+        content="Apresentações do Trabalhos de Conclusão de Curso em Jogos Digitais (2023/2025)">
+    <meta property="og:image" content="./assets/img/astronaut.png">
+    <meta property="og:url" content="https://tcc.camilaloliveira.me">
+    <meta property="og:type" content="website">
+
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="./assets/css/style.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link ref="stylesheet" href="./assets/css/style.css">
     <link rel="icon" href="./assets/img/astronaut.png" type="image/x-icon">
 </head>
 
 <body class="bg-dark">
+    <div class="stars" id="stars"></div>
+
+    <!-- Botão de Troca de Tema -->
+    <button class="theme-toggle" id="themeToggle" title="Trocar Tema">
+        <span class="material-symbols-outlined">palette</span>
+    </button>
 
     <header class="hero-section text-white d-flex align-items-center justify-content-center">
-        <div class="parallax-astronauta d-none d-lg-block">
-            </div>
+        <div class="parallax-astronauta d-none d-lg-block"></div>
 
         <div class="container text-center hero-content position-relative">
-            <h1 class="display-1 fw-bold mb-3 highlight-text">TCC 2025</h1>
+            <h1 class="display-1 fw-bold mb-3 highlight-text">
+                <span class="material-symbols-outlined" style="font-size: 0.8em;">rocket_launch</span>
+                TCC 2025
+            </h1>
             <p class="lead mb-4 highlight-text-secondary">
-                <i class="bi bi-rocket-takeoff-fill"></i>MISSÃO CONCLUÍDA - ETEC ERMELINDA
+                <span class="material-symbols-outlined">check_circle</span>
+                MISSÃO CONCLUÍDA - ETEC ERMELINDA
             </p>
             <div class="badge bg-danger p-3 mb-5 fs-5">
+                <span class="material-symbols-outlined">calendar_today</span>
                 <span class="text-uppercase fw-bolder">Dia: 04/12/2025</span>
             </div>
 
             <div class="d-grid gap-2 col-md-6 mx-auto">
-                <button type="button" class="btn btn-lg btn-primary cta-button" data-bs-toggle="modal"
-                    data-bs-target="#linksModal">
-                    VER TURMAS PARTICIPANES
-                </button>
+                <a href="#projetos" class="btn btn-lg btn-primary cta-button">
+                    <span class="material-symbols-outlined">groups</span>
+                    VER TURMAS PARTICIPANTES
+                </a>
             </div>
         </div>
     </header>
+
     <section class="container my-5 text-center">
-        <h2 class="text-uppercase mb-4 highlight-text-secondary">SOBRE</h2>
+        <h2 class="text-uppercase mb-4 highlight-text-secondary">
+            <span class="material-symbols-outlined">info</span>
+            SOBRE
+        </h2>
 
         <p class="lead mb-4 highlight-text">
-            Ao longo de 2025, os alunos da ETEC Ermelinda desenvolveram jogos digitais referentes aos seus trabalhos de conclusão de curso. 
-            Além da programação, eles puderam pesquisar e desenvolver através de temas que podem ser cada dia mais abordados na sociedade: desde a cultura nativa até à acessibilidade, passando pela saúde mental.
+            Ao longo de 2025, os alunos da ETEC Ermelinda desenvolveram jogos digitais referentes aos seus trabalhos de
+            conclusão de curso.
+            Além da programação, eles puderam pesquisar e desenvolver através de temas que podem ser cada dia mais
+            abordados na sociedade: desde a cultura nativa até à acessibilidade, passando pela saúde mental.
         </p>
 
         <p class="lead mb-4 highlight-text-secondary">
-            Para esta missão, eles puderam contar com a orientação da Prof. Camila Leite, acompanhada do corpo docente, liderado pela Coord. Allana Pessi e Coord. Pedagógica Luzia Cintra.
+            Para esta missão, eles puderam contar com a orientação da Prof. Camila Leite, acompanhada do corpo docente,
+            liderado pela Coord. Allana Pessi e Coord. Pedagógica Luzia Cintra.
         </p>
     </section>
 
+    <section id="projetos" class="container my-5">
+        <h2 class="text-uppercase mb-5 text-center highlight-text-secondary">
+            <span class="material-symbols-outlined">videogame_asset</span>
+            PROJETOS DOS ALUNOS
+        </h2>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="game-card">
+                    <h2 class="game-title">Color Off</h2>
+                    <p class="studio-name">por Loomi Studio</p>
+                    <div class="card-tags">
+                        <span class="tag"><span class="material-symbols-outlined">wand_stars</span> Magia</span>
+                        <span class="tag"><span class="material-symbols-outlined">explore</span> Aventura</span>
+                    </div>
+                    <a href="https://www.instagram.com/loom.istudio/" target="_blank" class="social-btn">
+                        <span class="material-symbols-outlined">link</span>
+                        Visite o Instagram
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="game-card">
+                    <h2 class="game-title">Ibira</h2>
+                    <p class="studio-name">por Animal Bellum</p>
+                    <div class="card-tags">
+                        <span class="tag"><span class="material-symbols-outlined">park</span> Cultura Nativa</span>
+                        <span class="tag"><span class="material-symbols-outlined">auto_stories</span> Narrativo</span>
+                    </div>
+                    <span class="coming-soon"><span class="material-symbols-outlined">schedule</span> Em breve</span>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="game-card">
+                    <h2 class="game-title">Acessibilidade</h2>
+                    <p class="studio-name">por Wolf Games</p>
+                    <div class="card-tags">
+                        <span class="tag"><span class="material-symbols-outlined">accessibility</span> Inclusão</span>
+                        <span class="tag"><span class="material-symbols-outlined">school</span> Educativo</span>
+                    </div>
+                    <a href="https://www.instagram.com/wolf_games07/" target="_blank" class="social-btn">
+                        <span class="material-symbols-outlined">link</span>
+                        Visite o Instagram
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="game-card">
+                    <h2 class="game-title">Réstia</h2>
+                    <p class="studio-name">por Pão de Batata Games</p>
+                    <div class="card-tags">
+                        <span class="tag"><span class="material-symbols-outlined">auto_awesome</span> Fantasia</span>
+                        <span class="tag"><span class="material-symbols-outlined">swords</span> Ação</span>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=yZV9eFhv34k" target="_blank" class="social-btn">
+                        <span class="material-symbols-outlined">play_circle</span>
+                        Assista no YouTube
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="game-card">
+                    <h2 class="game-title">The Lost Mind</h2>
+                    <p class="studio-name">por Infinite Games</p>
+                    <div class="card-tags">
+                        <span class="tag"><span class="material-symbols-outlined">psychology</span> Saúde Mental</span>
+                        <span class="tag"><span class="material-symbols-outlined">masks</span> Psicológico</span>
+                    </div>
+                    <a href="https://www.instagram.com/infinitegames2025/" target="_blank" class="social-btn">
+                        <span class="material-symbols-outlined">link</span>
+                        Visite o Instagram
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="game-card">
+                    <h2 class="game-title">Kaïra</h2>
+                    <p class="studio-name">por Acqua Games</p>
+                    <div class="card-tags">
+                        <span class="tag"><span class="material-symbols-outlined">wand_stars</span> Magia</span>
+                        <span class="tag"><span class="material-symbols-outlined">explore</span> Exploração</span>
+                    </div>
+                    <a href="https://www.instagram.com/acquagames/" target="_blank" class="social-btn">
+                        <span class="material-symbols-outlined">link</span>
+                        Visite o Instagram
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="game-card">
+                    <h2 class="game-title">Reboot City</h2>
+                    <p class="studio-name">por Awen Games</p>
+                    <div class="card-tags">
+                        <span class="tag"><span class="material-symbols-outlined">location_city</span> Urbano</span>
+                        <span class="tag"><span class="material-symbols-outlined">interactive_space</span> Interativo</span>
+                    </div>
+                    <a href="https://www.instagram.com/awen.sp/" target="_blank" class="social-btn">
+                        <span class="material-symbols-outlined">link</span>
+                        Visite o Instagram
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="game-card">
+                    <h2 class="game-title">The Lost Chrono - Efeitos de Guerra</h2>
+                    <p class="studio-name">TBA</p>
+                    <div class="card-tags">
+                        <span class="tag"><span class="material-symbols-outlined">military_tech</span> Guerra</span>
+                        <span class="tag"><span class="material-symbols-outlined">schedule</span> Temporal</span>
+                    </div>
+                    <span class="coming-soon"><span class="material-symbols-outlined">schedule</span> Em breve</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="container my-5 text-center">
-        <h2 class="text-uppercase mb-4 highlight-text-secondary">📍 ONDE ATERRISSAR: LOCAL DO EVENTO</h2>
+        <h2 class="text-uppercase mb-4 highlight-text-secondary">
+            <span class="material-symbols-outlined">location_on</span>
+            ONDE ATERRISSAR: LOCAL DO EVENTO
+        </h2>
 
         <div class="map-container mb-3 shadow-lg border border-3 border-info rounded-3">
             <iframe
@@ -61,59 +216,23 @@
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <p class="text-muted small">
-            <span class="text-warning">ATENÇÃO: Semana que vem teremos o ensaio do TCC com os alunos. </span>
+            <span class="material-symbols-outlined" style="color: #ffc107;">warning</span>
+            <span class="text-warning">ATENÇÃO: Semana que vem teremos o ensaio do TCC com os alunos.</span>
         </p>
     </section>
 
-    <footer class="bg-black text-center text-white-50 py-3 mt-5">
+    <footer class="bg-black text-center text-white-50 py-4 mt-5">
         <div class="container">
-            <p class="mb-0 small text-uppercase">© 2025 <a href="https://etecermelinda.cps.sp.gov.br" target="_blank">ETEC ERMELINDA</a>. TODOS OS DIREITOS RESERVADOS.</p>
+            <p class="mb-0 small text-uppercase">© 2025 <a href="https://etecermelinda.cps.sp.gov.br"
+                    target="_blank">ETEC ERMELINDA</a>. TODOS OS DIREITOS RESERVADOS.</p>
         </div>
     </footer>
-
-    <div class="modal fade" id="linksModal" tabindex="-1" aria-labelledby="linksModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content bg-dark border border-primary shadow-lg">
-                <div class="modal-header border-bottom-0">
-                    <h5 class="modal-title text-primary fw-bold text-uppercase" id="linksModalLabel">🔗 Links para
-                        Apresentações</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p class="text-light">Selecione a turma para ver os detalhes e links dos projetos:</p>
-                    <div class="list-group">
-                        <a href="https://www.instagram.com/loom.istudio/" target="_blank"
-                            class="list-group-item list-group-item-action bg-secondary-subtle text-dark mb-2 text-uppercase fw-bold">Color Off, de Loomi Studio</a>
-                        <a href="#" target="_blank"
-                            class="list-group-item list-group-item-action bg-secondary-subtle text-dark mb-2 text-uppercase fw-bold">Ibira, de Animal Bellum</a>
-                        <a href="https://www.instagram.com/wolf_games07/" target="_blank"
-                            class="list-group-item list-group-item-action bg-secondary-subtle text-dark mb-2 text-uppercase fw-bold">Acessibilidade, de Wolf
-                            Games</a>
-                        <a href="https://www.youtube.com/watch?v=yZV9eFhv34k" target="_blank"
-                            class="list-group-item list-group-item-action bg-secondary-subtle text-dark mb-2 text-uppercase fw-bold">Réstia, de Pão
-                            de Batata Games</a>
-                        <a href="https://www.instagram.com/infinitegames2025/" target="_blank"
-                            class="list-group-item list-group-item-action bg-secondary-subtle text-dark mb-2 text-uppercase fw-bold">The Lost Mind, de Infinite Games</a>
-                        <a href="https://www.instagram.com/acquagames/" target="_blank"
-                            class="list-group-item list-group-item-action bg-secondary-subtle text-dark mb-2 text-uppercase fw-bold">Kaïra, de Acqua Games</a>
-                        <a href="https://www.instagram.com/awen.sp/" target="_blank"
-                            class="list-group-item list-group-item-action bg-secondary-subtle text-dark mb-2 text-uppercase fw-bold">Reboot City, de Awen Games</a>
-                        <a href="#" target="_blank"
-                            class="list-group-item list-group-item-action bg-secondary-subtle text-dark mb-2 text-uppercase fw-bold">The Lost Chrono - Efeitos de Guerra, grupo a anunciar</a>
-                    </div>
-                </div>
-                <div class="modal-footer border-top-0 justify-content-center">
-                    <p class="text-muted small fst-italic">*Os horários serão comunicados previamente, pela organização
-                        do evento*</p>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
