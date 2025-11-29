@@ -1,16 +1,22 @@
-@import url('themes.css');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Lexend:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
-@import url('code.css');
+@import url("themes.css");
+@import url("cards.css");
+@import url("code.css");
+@import url("hero.css");
+@import url("info.css");
 
 body {
     background: linear-gradient(135deg, #0a0e27 0%, #1a1a2e 50%, #16213e 100%);
     font-family: 'Lexend', sans-serif;
+    min-height: 100vh;
+    color: #e0f7fa;
 }
 
 h1,
 h2,
+h3,
 .game-title,
 .cta-button,
 .social-btn,
@@ -29,230 +35,18 @@ h2,
     font-size: 1.2em;
 }
 
-.hero-section {
-    min-height: 100vh;
-    background: linear-gradient(135deg, rgba(10, 14, 39, 0.95) 0%, rgba(26, 26, 46, 0.95) 100%);
-    background-image: url('../img/bg.jpg');
-    position: relative;
-    overflow: hidden;
-}
 
-.parallax-astronauta {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: url('../img/astronaut.png');
-    background-size: 300px;
-    background-repeat: no-repeat;
-    background-position: 90% 50%;
-    opacity: 0.15;
-    animation: float 6s ease-in-out infinite;
-}
 
-@keyframes float {
+/* ============================================
+   FOOTER
+   ============================================ */
 
-    0%,
-    100% {
-        transform: translateY(0px);
-    }
-
-    50% {
-        transform: translateY(-30px);
-    }
-}
-
-.hero-content {
-    z-index: 10;
-}
-
-.highlight-text {
-    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: glow 2s ease-in-out infinite alternate;
-}
-
-@keyframes glow {
-    from {
-        filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.5));
-    }
-
-    to {
-        filter: drop-shadow(0 0 40px rgba(255, 0, 110, 0.8));
-    }
-}
-
-.highlight-text-secondary {
-    color: #b8b8d1;
-}
-
-.cta-button {
-    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
-    border: none;
-    padding: 15px 40px;
-    font-size: 1.1rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 30px rgba(123, 44, 191, 0.4);
-}
-
-.cta-button:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(255, 0, 110, 0.6);
-}
-
-.game-card {
-    background: linear-gradient(135deg, rgba(26, 26, 46, 0.9) 0%, rgba(22, 33, 62, 0.9) 100%);
-    border: 2px solid rgba(0, 212, 255, 0.3);
-    border-radius: 20px;
-    padding: 30px;
-    margin-bottom: 30px;
-    transition: all 0.4s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.game-card::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(0, 212, 255, 0.1) 0%, transparent 70%);
-    animation: rotate 20s linear infinite;
-    pointer-events: none;
-}
-
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-.game-card:hover {
-    transform: translateY(-10px);
-    border-color: rgba(0, 212, 255, 0.8);
-    box-shadow: 0 20px 60px rgba(0, 212, 255, 0.4);
-}
-
-.game-title {
-    font-size: 1.8rem;
-    font-weight: 900;
-    color: var(--primary-color);
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    position: relative;
-    z-index: 1;
-}
-
-.studio-name {
-    font-size: 1rem;
-    color: #b8b8d1;
-    margin-bottom: 20px;
-    font-weight: 400;
-    position: relative;
-    z-index: 1;
-}
-
-.card-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 20px;
-    position: relative;
-    z-index: 1;
-}
-
-.tag {
-    background: rgba(123, 44, 191, 0.3);
-    border: 1px solid var(--secondary-color);
-    color: #e0aaff;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.social-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
-    color: white;
-    padding: 12px 30px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 700;
-    transition: all 0.3s ease;
-    border: none;
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    position: relative;
-    z-index: 1;
-}
-
-.social-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 30px rgba(255, 0, 110, 0.5);
-    color: white;
-}
-
-.coming-soon {
-    display: inline-block;
-    background: rgba(255, 193, 7, 0.2);
-    border: 1px solid #ffc107;
-    color: #ffc107;
-    padding: 8px 20px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 700;
-    position: relative;
-    z-index: 1;
-}
-
-.map-container {
-    border-radius: 20px;
-    overflow: hidden;
-}
-
-.stars {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.star {
-    position: absolute;
-    background: white;
-    border-radius: 50%;
-    animation: twinkle 3s infinite;
-}
-
-@keyframes twinkle {
-
-    0%,
-    100% {
-        opacity: 0.3;
-    }
-
-    50% {
-        opacity: 1;
-    }
+footer {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px 0;
+    margin-top: 60px;
+    text-align: center;
+    border-top: 2px solid rgba(0, 212, 255, 0.3);
 }
 
 footer a {
@@ -264,6 +58,10 @@ footer a {
 footer a:hover {
     color: var(--accent-color);
 }
+
+/* ============================================
+   THEME TOGGLE
+   ============================================ */
 
 .theme-toggle {
     position: fixed;
@@ -292,4 +90,48 @@ footer a:hover {
 
 .theme-toggle:active {
     transform: rotate(180deg) scale(0.95);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .subsection-title {
+        font-size: 1.2rem;
+    }
+
+    .back-button {
+        position: static;
+        margin: 20px auto;
+        width: fit-content;
+    }
+
+    .theme-toggle {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .allowed-list li,
+    .prohibited-list li {
+        font-size: 1rem;
+        padding: 12px 15px;
+    }
+
+    .section-card {
+        padding: 25px;
+    }
 }

@@ -1,0 +1,77 @@
+/* ============================================
+   HERO SECTION - Página Principal
+   ============================================ */
+
+.hero-section {
+    min-height: 100vh;
+    background: linear-gradient(135deg, rgba(10, 14, 39, 0.95) 0%, rgba(26, 26, 46, 0.95) 100%);
+    background-image: url('../img/bg.jpg');
+    position: relative;
+    overflow: hidden;
+}
+
+.parallax-astronauta {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/astronaut.png');
+    background-size: 300px;
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
+    opacity: 0.15;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+.hero-content {
+    z-index: 10;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 900;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero-subtitle {
+    color: #b8b8d1;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.highlight-text {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.5));
+    }
+
+    to {
+        filter: drop-shadow(0 0 40px rgba(255, 0, 110, 0.8));
+    }
+}
+
+.highlight-text-secondary {
+    color: #b8b8d1;
+}
