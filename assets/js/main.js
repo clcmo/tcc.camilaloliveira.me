@@ -1,8 +1,7 @@
-// ============================================
-// BOTÃO DE VOLTAR
-// ============================================
-
 document.addEventListener('DOMContentLoaded', function() {
+    // ============================================
+    // BOTÃO DE VOLTAR
+    // ============================================
     const backButton = document.getElementById('return');
     
     if (backButton) {
@@ -23,13 +22,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-});
 
-// ============================================
-// ESTRELAS ANIMADAS NO FUNDO
-// ============================================
+    // ============================================
+    // ESTRELAS ANIMADAS NO FUNDO
+    // ============================================
 
-document.addEventListener('DOMContentLoaded', function() {
+
     const starsContainer = document.getElementById('stars');
     
     if (starsContainer) {
@@ -45,13 +43,11 @@ document.addEventListener('DOMContentLoaded', function() {
             starsContainer.appendChild(star);
         }
     }
-});
 
-// ============================================
-// SISTEMA DE TROCA DE TEMA (se existir)
-// ============================================
+    // ============================================
+    // SISTEMA DE TROCA DE TEMA (se existir)
+    // ============================================
 
-document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('themeToggle');
     const body = document.body;
 
