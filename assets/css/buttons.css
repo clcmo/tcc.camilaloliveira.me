@@ -36,12 +36,17 @@
     letter-spacing: 1px;
     position: relative;
     z-index: 1;
+    box-shadow: 0 5px 15px rgba(123, 44, 191, 0.3);
 }
 
 .social-btn:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 30px rgba(255, 0, 110, 0.5);
     color: white;
+}
+
+.social-btn .material-symbols-outlined {
+    font-size: 1.2em;
 }
 
 .back {
