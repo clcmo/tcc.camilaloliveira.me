@@ -44,7 +44,7 @@
     color: white;
 }
 
-.back-button {
+.back {
     position: fixed;
     top: 20px;
     left: 20px;
@@ -60,10 +60,14 @@
     transition: all 0.3s ease;
     z-index: 1000;
     box-shadow: 0 5px 20px rgba(123, 44, 191, 0.4);
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
 }
 
-.back-button:hover {
+.back:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 30px rgba(255, 0, 110, 0.6);
-    color: white;
 }
