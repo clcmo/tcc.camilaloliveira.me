@@ -21,9 +21,9 @@
 
 .social-btn {
     display: inline-block;
-    background: var(--secondary-color);
+    background: rgba(123, 44, 191, 0.3);
     border: 1px solid var(--accent-color);
-    color: var(--accent-color);
+    color: #e0aaff;
     padding: 8px 20px;
     border-radius: 20px;
     font-size: 0.9rem;
