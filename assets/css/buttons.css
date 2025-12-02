@@ -32,6 +32,11 @@
     z-index: 1;
 }
 
+.social-btn a {
+    color: #e0f7fa;
+    text-decoration: none;
+}
+
 .back {
     position: fixed;
     top: 20px;
